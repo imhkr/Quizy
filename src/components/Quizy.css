@@ -36,7 +36,8 @@
 
 .answer:hover,
 .active {
-  background: lightgreen;
+  background: #020230;
+  cursor: pointer;
 }
 .answer.correct {
   animation: correct 4s ease forwards;
@@ -58,7 +59,7 @@
   }
   62%,
   100% {
-    background: green;
+    background: darkgreen;
   }
 }
 @keyframes incorrect {
@@ -74,6 +75,6 @@
   }
   62%,
   100% {
-    background: red;
+    background: darkred;
   }
 }
