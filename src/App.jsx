@@ -29,39 +29,39 @@ function App() {
 const QA=[
   {
     id:1,
-    question:"Rolex is a company that specializes in what type of product?",
+    question:"What is the actual measurement of data that can be sent over network?",
   answers:[
     {
-      text:"Phone",
+      text:"Bandwidth",
       correct:false,
     },
     {
-      text:"Watches",
+      text:"Throughput",
       correct:true,
     },{
-      text:"Phone",
+      text:"Queue size",
       correct:false,
     },{
-      text:"Phone",
+      text:" Coaxial cables",
       correct:false,
     },
   ],
   },{
     id:2,
-    question:"Pesiphon is a company that specializes in what type of product?",
+    question:"Which of these has the highest transmission capacity?",
   answers:[
     {
-      text:"Phone",
+      text:"Twisted pair cables",
       correct:false,
     },
     {
-      text:"Watches",
+      text:"Coaxial cables",
       correct:false,
     },{
-      text:"Food",
+      text:"Optical fibers",
       correct:true,
     },{
-      text:"Phone",
+      text:"All have the same",
       correct:false,
     },
   ],
