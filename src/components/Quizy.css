@@ -52,11 +52,6 @@
   44% {
     background: mediumblue;
   }
-  20%,
-  40%,
-  60% {
-    background: linear-gradient(#0e0123, #22074d);
-  }
   62%,
   100% {
     background: darkgreen;
@@ -67,11 +62,6 @@
   22%,
   44% {
     background: mediumblue;
-  }
-  20%,
-  40%,
-  60% {
-    background: linear-gradient(#0e0123, #22074d);
   }
   62%,
   100% {
