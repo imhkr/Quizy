@@ -33,6 +33,7 @@ useMemo(()=>
 const handleClick=(i)=>{
 setclickedanswer(i);
 setClassName("answer active");
+waitplease();
 delay(3000,()=>
 setClassName(i.correct ? "answer correct":"answer incorrect")
 );
