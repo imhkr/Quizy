@@ -30,13 +30,13 @@
   background-color: teal;
 }
 .questionNumber {
-  font: 25px;
+  font: 36px;
   font-weight: 900;
   align-items: center;
   width: 20%;
 }
 .questionAmount {
-  font: 25px;
+  font: 36px;
   font-weight: 900;
   align-items: center;
 }
@@ -102,10 +102,11 @@
 }
 .playGame {
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
+  background-color: bisque;
 }

@@ -10,7 +10,7 @@ const handleClick=()=>{
             <input type="text" placeholder="Enter Your Name" className="inputbox" 
             ref={inputRef}
             />
-            <button className="playGame" onClick={handleClick}>Start</button>
+            <button className="playGame" onClick={handleClick}>Start ➡</button>
         </div>
     );
 }
