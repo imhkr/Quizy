@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.test {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  color: white;
+  background-color: #020230;
+}
+.main {
+  width: 75%;
+  background: url(./assets/bg.jpg);
+}
+.sideui {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+.moneyList {
+  list-style: none;
+  width: 100%;
+  padding: 1rem;
+}
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 4px;
+}
+.moneyListItem.active {
+  background-color: teal;
+}
+.questionNumber {
+  font: 25px;
+  font-weight: 900;
+  align-items: center;
+  width: 20%;
+}
+.questionAmount {
+  font: 25px;
+  font-weight: 900;
+  align-items: center;
+}
+.top {
+  height: 50%;
+  position: relative;
+}
+.timer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.bottom {
+  height: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.finalScore {
+  position: absolute;
+  top: 50%;
+  right: 55%;
+  transform: translate(30%, -30%);
 }
