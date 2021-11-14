@@ -15,6 +15,7 @@ export default function Quizy({data,setStop,questionNumber,setQuestionNumber})
    const [waitplease]=useSound(wait)
    const [correctanswer]=useSound(correct)
    const [wronganswer]=useSound(wrong)
+   const [countQuestion,setCountQuestion]=useState(1);
 
 useEffect(()=>
 {
@@ -32,25 +33,40 @@ useEffect(()=>
     }
     useEffect(()=>{
 waitplease();
-    },[waitplease,questionNumber]);
+    },[waitplease]);
+    
+
 const handleClick=(i)=>{
+   
 setclickedanswer(i);
+
+
+  
 setClassName("answer active");
-delay(4000,()=>
+delay(3000,()=>
 setClassName(i.correct ? "answer correct":"answer incorrect")
 );
-delay(7000,()=>{
+setCountQuestion((countQuestion)=>(countQuestion+1));
+// console.log("count is ",countQuestion)
+if(countQuestion==15)
+{
+    delay(1000,()=>{
+setStop(true);
+        });
+}
+delay(5000,()=>{
     if(i.correct)
     {
+
         correctanswer();
-   delay(50,()=>{
+   delay(1000,()=>{
  setQuestionNumber((prev)=>(prev+1));
         setclickedanswer(null);
 }); 
     }
     
     else
-    {
+    {       
             wronganswer();
         delay(1000,()=>{
 setStop(true);
@@ -58,6 +74,8 @@ setStop(true);
     }
 });
 };
+
+
     return(
 <div className="quizy">
     <div className="question">
@@ -65,7 +83,8 @@ setStop(true);
     </div>
     <div className="answers">
         {question?.answers.map((i)=>(
-         <div className={clickedanswer===i? className : "answer"} onClick={()=>handleClick(i)}>
+          
+         <div id="myDiv" className={clickedanswer===i? className : "answer"} onClick={()=>handleClick(i)}>
        {i.text}
         </div>
         ))}
