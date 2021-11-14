@@ -5,12 +5,14 @@ export default function PlayGame({setUserName}){
 const handleClick=()=>{
     inputRef.current.value && setUserName(inputRef.current.value);
 };
+
     return (
         <div className="play">
-            <input type="text" placeholder="Enter Your Name" className="inputbox" 
+            <input type="text"  placeholder="Enter Your Name" className="inputbox" 
             ref={inputRef}
             />
-            <button className="playGame" onClick={handleClick}>Start ➡</button>
+            <button className="playGame" type="submit" onClick={handleClick}>Start ➡</button>
         </div>
+       
     );
 }
