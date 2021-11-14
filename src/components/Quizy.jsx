@@ -1,4 +1,4 @@
-import { useEffect,useState,setTimeOut, useMemo } from "react";
+import { useEffect,useState, useMemo } from "react";
 import "./Quizy.css"
 import useSound from "use-sound";
 import play from "../sounds/play.mp3"
@@ -16,7 +16,7 @@ export default function Quizy({data,setStop,questionNumber,setQuestionNumber})
    const [correctanswer]=useSound(correct)
    const [wronganswer]=useSound(wrong)
 
-useMemo(()=>
+useEffect(()=>
 {
     startplay()
 },[startplay]);
@@ -30,22 +30,25 @@ useMemo(()=>
            callback() 
         }, duration);
     }
+    useEffect(()=>{
+waitplease();
+    },[waitplease,questionNumber]);
 const handleClick=(i)=>{
 setclickedanswer(i);
 setClassName("answer active");
-waitplease();
-delay(3000,()=>
+delay(4000,()=>
 setClassName(i.correct ? "answer correct":"answer incorrect")
 );
-delay(5000,()=>{
+delay(7000,()=>{
     if(i.correct)
     {
         correctanswer();
-delay(1000,()=>{
- setQuestionNumber((prev)=>prev+1);
+   delay(50,()=>{
+ setQuestionNumber((prev)=>(prev+1));
         setclickedanswer(null);
-});    
+}); 
     }
+    
     else
     {
             wronganswer();

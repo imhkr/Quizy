@@ -25,6 +25,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  user-select: none;
 }
 .answer {
   width: 40%;
@@ -36,6 +37,7 @@
   font-size: 20px;
   font-weight: 400;
   margin: 1rem;
+  user-select: none;
 }
 
 .answer:hover,
@@ -84,6 +86,7 @@
     display: flex;
     justify-content: center;
     margin-top: -8rem;
+    user-select: none;
   }
   .answer {
     width: 50%;
@@ -95,5 +98,6 @@
     font-size: 20px;
     font-weight: 400;
     margin: 1rem;
+    user-select: none;
   }
 }

@@ -1,4 +1,4 @@
-import { useState ,useEffect} from 'react';
+import { useState ,useEffect,memo} from 'react';
 import './App.css';
 import PlayGame from './components/PlayGame';
 import Quizy from './components/Quizy';
@@ -327,6 +327,7 @@ const QA=[
   ],
   },
 ];
+console.log("App component render now");
   useEffect(() => {
     questionNumber > 1 &&
       setEarned(data.find((i) => i.id === questionNumber - 1).amount);
@@ -370,4 +371,4 @@ const QA=[
   );
 }
 
-export default App;
+export default memo(App);
