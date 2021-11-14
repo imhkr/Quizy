@@ -111,8 +111,10 @@
     right: 55%;
     transform: translate(30%, -30%); */
     margin-top: -3rem;
+    font-size: 27px;
   }
   .finalScore1 {
+    font-size: 27px;
     width: 60%;
     position: absolute;
     top: 90%;
